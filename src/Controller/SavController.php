@@ -31,11 +31,13 @@ class SavController extends AbstractController
     public function new(Request $request): Response
     {
         $sav = new Sav();
+        $sav->setDtCrea(new \DateTime());
         $form = $this->createForm(SavType::class, $sav);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            $sav->setDtCrea(new \DateTime());
             $entityManager->persist($sav);
             $entityManager->flush();
 

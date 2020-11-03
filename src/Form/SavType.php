@@ -19,7 +19,6 @@ class SavType extends AbstractType
             ->add('sav_codepos')
             ->add('sav_ville')
             ->add('sav_probleme')
-            ->add('dt_crea')
             ->add('clients')
         ;
     }
