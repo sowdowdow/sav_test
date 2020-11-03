@@ -13,12 +13,12 @@
                     Client
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ path('client_index') }}">Liste des clients</a>
-                    <a class="dropdown-item" href="{{ path('client_new') }}">Création de client</a>
+                    <a class="dropdown-item" href="{{ path('client_index') }}">{% trans %}Liste des clients{% endtrans %}</a>
+                    <a class="dropdown-item" href="{{ path('client_new') }}">{% trans %}Création de client{% endtrans %}</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('sav_index') }}" tabindex="-1" aria-disabled="true">Liste des SAV</a>
+                <a class="nav-link" href="{{ path('sav_index') }}" tabindex="-1" aria-disabled="true">{% trans %}Liste des SAV{% endtrans %}</a>
             </li>
         </ul>
     </div>
