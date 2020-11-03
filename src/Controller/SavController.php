@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Client;
 use App\Entity\Sav;
 use App\Form\SavType;
 use App\Repository\SavRepository;
@@ -32,6 +33,18 @@ class SavController extends AbstractController
     {
         $sav = new Sav();
         $sav->setDtCrea(new \DateTime());
+        $id_client = $request->get('id_client');
+        if (!empty($id_client)) {
+            $client = $this->getDoctrine()
+                ->getRepository(Client::class)
+                ->find($id_client);
+            $sav->setSavNom($client->getNom());
+            $sav->setSavPrenom($client->getPrenom());
+            $sav->setSavAdr1($client->getAdr1());
+            $sav->setSavAdr2($client->getAdr2());
+            $sav->setSavCodepos($client->getCodepos());
+            $sav->setSavVille($client->getVille());
+        }
         $form = $this->createForm(SavType::class, $sav);
         $form->handleRequest($request);
 
@@ -85,7 +98,7 @@ class SavController extends AbstractController
      */
     public function delete(Request $request, Sav $sav): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$sav->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $sav->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($sav);
             $entityManager->flush();

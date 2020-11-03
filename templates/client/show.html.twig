@@ -42,5 +42,7 @@
 
     <a href="{{ path('client_edit', {'id': client.id}) }}">edit</a>
 
+    <a href="{{ path('sav_new', {'id_client': client.id}) }}">Créer un SAV</a>
+
     {{ include('client/_delete_form.html.twig') }}
 {% endblock %}
