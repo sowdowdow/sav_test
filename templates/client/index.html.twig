@@ -29,8 +29,8 @@
                 <td>{{ client.codepos }}</td>
                 <td>{{ client.ville }}</td>
                 <td>
-                    <a href="{{ path('client_show', {'id': client.id}) }}">show</a>
-                    <a href="{{ path('client_edit', {'id': client.id}) }}">edit</a>
+                    <a href="{{ path('client_show', {'id': client.id}) }}">{% trans %}voir{% endtrans %}</a>
+                    <a href="{{ path('client_edit', {'id': client.id}) }}">{% trans %}modifier{% endtrans %}</a>
                 </td>
             </tr>
         {% else %}
@@ -41,7 +41,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('client_new') }}">Create new</a>
-    <a href="{{ path('sav_new') }}">Créer un SAV</a>
+    <a href="{{ path('client_new') }}">{% trans %}Create new{% endtrans %}</a>
+    <a href="{{ path('sav_new') }}">{% trans %}Créer un SAV{% endtrans %}</a>
 
 {% endblock %}

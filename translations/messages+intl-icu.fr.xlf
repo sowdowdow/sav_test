@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="0ivqSr2" resname="Liste des clients">
+        <source>Liste des clients</source>
+        <target>Liste des clients</target>
+      </trans-unit>
+      <trans-unit id="uLdjmzy" resname="Création de client">
+        <source>Création de client</source>
+        <target>Création de client</target>
+      </trans-unit>
+      <trans-unit id="Rtos_2c" resname="Liste des SAV">
+        <source>Liste des SAV</source>
+        <target>Liste des SAV</target>
+      </trans-unit>
+      <trans-unit id="nz33U6Q" resname="Create new">
+        <source>Create new</source>
+        <target>Créer</target>
+      </trans-unit>
+      <trans-unit id="VC0IaSy" resname="Créer un SAV">
+        <source>Créer un SAV</source>
+        <target>Créer un SAV</target>
+      </trans-unit>
+      <trans-unit id="DVXDi5N" resname="voir">
+        <source>voir</source>
+        <target>voir</target>
+      </trans-unit>
+      <trans-unit id="xwYQJiS" resname="modifier">
+        <source>modifier</source>
+        <target>modifier</target>
+      </trans-unit>
+      <trans-unit id="f4h8fvc" resname="retour à la liste">
+        <source>back to list</source>
+        <target>retour à la liste</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

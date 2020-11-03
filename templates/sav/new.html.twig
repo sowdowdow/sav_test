@@ -3,9 +3,9 @@
 {% block title %}New Sav{% endblock %}
 
 {% block body %}
-    <h1>Create new Sav</h1>
+    <h1>{% trans %}Create new{% endtrans %} Sav</h1>
 
     {{ include('sav/_form.html.twig') }}
 
-    <a href="{{ path('sav_index') }}">back to list</a>
+    <a href="{{ path('sav_index') }}">{% trans %}retour à la liste{% endtrans %}</a>
 {% endblock %}
